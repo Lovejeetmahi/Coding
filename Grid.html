@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--<style>
+        .top{
+            background-color: greenyellow;
+            font-size: 20px;
+            height: 70px;
+            justify-content: center;
+            align-content: center;
+        }
+        .sidebar{
+            height: 100px;
+            background-color: darkgray;
+            width: 100px;
+            margin: margin-left;
+        }
+        .main{
+            height: 100px;
+            width:100px;
+            background-color: black;
+            color: ghostwhite;
+            justify-content: center;
+        }
+    </style>-->
+    <style>
+        body{
+            margin: 0;                        
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-areas: /*Tells how the elements are to be alligned*/
+            "header header" 
+            "sidebar main" 
+            "footer footer";
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 250px 1fr;
+            height: 100vh;
+        }
+        /*Header*/
+        .header{
+            grid-area: header;
+            background-color: #4CAF50;
+            color:white;
+            text-align:center;
+            padding:1rem;
+        }
+        .sidebar{
+            grid-area: sidebar;
+            background-color: darkgray;
+            padding: 1 rem;
+            border-right: 1px solid #ddd;
+        }
+        .main-content{
+            grid-area: main;
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border-left: 1px solid #ddd;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: black;
+            color:white;
+            text-align:center;
+            padding:1rem;
+        }
+    </style>
+</head>
+<body>
+    <!--<div class="top" align="center">
+        HEADER
+    </div>
+    <div class="main">Main content</div>
+    <div class="sidebar">Sidebar</div>-->
+    <div class="grid-container">
+        <header class="header">Header</header>
+        <aside class="sidebar">sidebar</aside>
+        <main class="main-content">Main content</main>
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
+</html>
